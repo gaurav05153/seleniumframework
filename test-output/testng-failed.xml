@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Relevel Automation RgressionSuite]">
+  <listeners>
+    <listener class-name="utils.Listener"/>
+  </listeners>
+  <test parallel="none" name="RegressionSuite(failed)">
+    <classes>
+      <class name="scripts.TestCase">
+        <methods>
+          <include name="tc_6"/>
+          <include name="beforemethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- scripts.TestCase -->
+    </classes>
+  </test> <!-- RegressionSuite(failed) -->
+</suite> <!-- Failed suite [Relevel Automation RgressionSuite] -->

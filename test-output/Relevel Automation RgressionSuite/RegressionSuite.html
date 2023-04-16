@@ -1,0 +1,1062 @@
+<html>
+<head>
+<title>TestNG:  RegressionSuite</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RegressionSuite</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Nov 20 11:54:11 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>3 seconds (3578 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='scripts.TestCase.beforeSuite()'><b>beforeSuite</b><br>Test class: scripts.TestCase</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x564458412713 &lt;unknown&gt;
+#1 0x5644581ae211 &lt;unknown&gt;
+#2 0x5644581d7938 &lt;unknown&gt;
+#3 0x5644581d46f7 &lt;unknown&gt;
+#4 0x5644582182b9 &lt;unknown&gt;
+#5 0x56445821764c &lt;unknown&gt;
+#6 0x56445820fbf3 &lt;unknown&gt;
+#7 0x5644581e0f34 &lt;unknown&gt;
+#8 0x5644581e1f41 &lt;unknown&gt;
+#9 0x564458451058 &lt;unknown&gt;
+#10 0x564458452eee &lt;unknown&gt;
+#11 0x564458452960 &lt;unknown&gt;
+#12 0x5644584535b5 &lt;unknown&gt;
+#13 0x56445843fbfc &lt;unknown&gt;
+#14 0x5644584538fe &lt;unknown&gt;
+#15 0x564458435d35 &lt;unknown&gt;
+#16 0x56445846e958 &lt;unknown&gt;
+#17 0x56445846ea90 &lt;unknown&gt;
+#18 0x564458487cf5 &lt;unknown&gt;
+#19 0x7f8874e8e6db start_thread
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at scripts.TestCase.beforeSuite(TestCase.java:40)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1445758842", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1445758842'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x564458412713 &lt;unknown&gt;
+#1 0x5644581ae211 &lt;unknown&gt;
+#2 0x5644581d7938 &lt;unknown&gt;
+#3 0x5644581d46f7 &lt;unknown&gt;
+#4 0x5644582182b9 &lt;unknown&gt;
+#5 0x56445821764c &lt;unknown&gt;
+#6 0x56445820fbf3 &lt;unknown&gt;
+#7 0x5644581e0f34 &lt;unknown&gt;
+#8 0x5644581e1f41 &lt;unknown&gt;
+#9 0x564458451058 &lt;unknown&gt;
+#10 0x564458452eee &lt;unknown&gt;
+#11 0x564458452960 &lt;unknown&gt;
+#12 0x5644584535b5 &lt;unknown&gt;
+#13 0x56445843fbfc &lt;unknown&gt;
+#14 0x5644584538fe &lt;unknown&gt;
+#15 0x564458435d35 &lt;unknown&gt;
+#16 0x56445846e958 &lt;unknown&gt;
+#17 0x56445846ea90 &lt;unknown&gt;
+#18 0x564458487cf5 &lt;unknown&gt;
+#19 0x7f8874e8e6db start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at scripts.TestCase.beforeSuite(TestCase.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='scripts.TestCase.beforemethod()'><b>beforemethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.beforemethod()'><b>beforemethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.beforemethod()'><b>beforemethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.beforemethod()'><b>beforemethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.beforemethod()'><b>beforemethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.beforemethod()'><b>beforemethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.afterMethod()'><b>afterMethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.afterMethod()'><b>afterMethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.afterMethod()'><b>afterMethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.afterMethod()'><b>afterMethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.afterMethod()'><b>afterMethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.afterMethod()'><b>afterMethod</b><br>Test class: scripts.TestCase</td>
+<td></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='scripts.TestCase.tc_1()'><b>tc_1</b><br>Test class: scripts.TestCase<br>Test method: TC001-This test verifies user see a validation message when invalid mobile number entered for login</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x556a5a889713 &lt;unknown&gt;
+#1 0x556a5a625211 &lt;unknown&gt;
+#2 0x556a5a64e938 &lt;unknown&gt;
+#3 0x556a5a64b6f7 &lt;unknown&gt;
+#4 0x556a5a68f2b9 &lt;unknown&gt;
+#5 0x556a5a68e64c &lt;unknown&gt;
+#6 0x556a5a686bf3 &lt;unknown&gt;
+#7 0x556a5a657f34 &lt;unknown&gt;
+#8 0x556a5a658f41 &lt;unknown&gt;
+#9 0x556a5a8c8058 &lt;unknown&gt;
+#10 0x556a5a8c9eee &lt;unknown&gt;
+#11 0x556a5a8c9960 &lt;unknown&gt;
+#12 0x556a5a8ca5b5 &lt;unknown&gt;
+#13 0x556a5a8b6bfc &lt;unknown&gt;
+#14 0x556a5a8ca8fe &lt;unknown&gt;
+#15 0x556a5a8acd35 &lt;unknown&gt;
+#16 0x556a5a8e5958 &lt;unknown&gt;
+#17 0x556a5a8e5a90 &lt;unknown&gt;
+#18 0x556a5a8fecf5 &lt;unknown&gt;
+#19 0x7fbe0751e6db start_thread
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2086945474", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2086945474'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x556a5a889713 &lt;unknown&gt;
+#1 0x556a5a625211 &lt;unknown&gt;
+#2 0x556a5a64e938 &lt;unknown&gt;
+#3 0x556a5a64b6f7 &lt;unknown&gt;
+#4 0x556a5a68f2b9 &lt;unknown&gt;
+#5 0x556a5a68e64c &lt;unknown&gt;
+#6 0x556a5a686bf3 &lt;unknown&gt;
+#7 0x556a5a657f34 &lt;unknown&gt;
+#8 0x556a5a658f41 &lt;unknown&gt;
+#9 0x556a5a8c8058 &lt;unknown&gt;
+#10 0x556a5a8c9eee &lt;unknown&gt;
+#11 0x556a5a8c9960 &lt;unknown&gt;
+#12 0x556a5a8ca5b5 &lt;unknown&gt;
+#13 0x556a5a8b6bfc &lt;unknown&gt;
+#14 0x556a5a8ca8fe &lt;unknown&gt;
+#15 0x556a5a8acd35 &lt;unknown&gt;
+#16 0x556a5a8e5958 &lt;unknown&gt;
+#17 0x556a5a8e5a90 &lt;unknown&gt;
+#18 0x556a5a8fecf5 &lt;unknown&gt;
+#19 0x7fbe0751e6db start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.tc_2()'><b>tc_2</b><br>Test class: scripts.TestCase<br>Test method: TC002-This test verify user can click login button when valid mobile number is provided</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x55c9e5d34713 &lt;unknown&gt;
+#1 0x55c9e5ad0211 &lt;unknown&gt;
+#2 0x55c9e5af9938 &lt;unknown&gt;
+#3 0x55c9e5af66f7 &lt;unknown&gt;
+#4 0x55c9e5b3a2b9 &lt;unknown&gt;
+#5 0x55c9e5b3964c &lt;unknown&gt;
+#6 0x55c9e5b31bf3 &lt;unknown&gt;
+#7 0x55c9e5b02f34 &lt;unknown&gt;
+#8 0x55c9e5b03f41 &lt;unknown&gt;
+#9 0x55c9e5d73058 &lt;unknown&gt;
+#10 0x55c9e5d74eee &lt;unknown&gt;
+#11 0x55c9e5d74960 &lt;unknown&gt;
+#12 0x55c9e5d755b5 &lt;unknown&gt;
+#13 0x55c9e5d61bfc &lt;unknown&gt;
+#14 0x55c9e5d758fe &lt;unknown&gt;
+#15 0x55c9e5d57d35 &lt;unknown&gt;
+#16 0x55c9e5d90958 &lt;unknown&gt;
+#17 0x55c9e5d90a90 &lt;unknown&gt;
+#18 0x55c9e5da9cf5 &lt;unknown&gt;
+#19 0x7f0118a266db start_thread
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace698784309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace698784309'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x55c9e5d34713 &lt;unknown&gt;
+#1 0x55c9e5ad0211 &lt;unknown&gt;
+#2 0x55c9e5af9938 &lt;unknown&gt;
+#3 0x55c9e5af66f7 &lt;unknown&gt;
+#4 0x55c9e5b3a2b9 &lt;unknown&gt;
+#5 0x55c9e5b3964c &lt;unknown&gt;
+#6 0x55c9e5b31bf3 &lt;unknown&gt;
+#7 0x55c9e5b02f34 &lt;unknown&gt;
+#8 0x55c9e5b03f41 &lt;unknown&gt;
+#9 0x55c9e5d73058 &lt;unknown&gt;
+#10 0x55c9e5d74eee &lt;unknown&gt;
+#11 0x55c9e5d74960 &lt;unknown&gt;
+#12 0x55c9e5d755b5 &lt;unknown&gt;
+#13 0x55c9e5d61bfc &lt;unknown&gt;
+#14 0x55c9e5d758fe &lt;unknown&gt;
+#15 0x55c9e5d57d35 &lt;unknown&gt;
+#16 0x55c9e5d90958 &lt;unknown&gt;
+#17 0x55c9e5d90a90 &lt;unknown&gt;
+#18 0x55c9e5da9cf5 &lt;unknown&gt;
+#19 0x7f0118a266db start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.tc_3()'><b>tc_3</b><br>Test class: scripts.TestCase<br>Test method: TC003-This test verify user can edit and login with new mobile number</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x564dc9b6c713 &lt;unknown&gt;
+#1 0x564dc9908211 &lt;unknown&gt;
+#2 0x564dc9931938 &lt;unknown&gt;
+#3 0x564dc992e6f7 &lt;unknown&gt;
+#4 0x564dc99722b9 &lt;unknown&gt;
+#5 0x564dc997164c &lt;unknown&gt;
+#6 0x564dc9969bf3 &lt;unknown&gt;
+#7 0x564dc993af34 &lt;unknown&gt;
+#8 0x564dc993bf41 &lt;unknown&gt;
+#9 0x564dc9bab058 &lt;unknown&gt;
+#10 0x564dc9baceee &lt;unknown&gt;
+#11 0x564dc9bac960 &lt;unknown&gt;
+#12 0x564dc9bad5b5 &lt;unknown&gt;
+#13 0x564dc9b99bfc &lt;unknown&gt;
+#14 0x564dc9bad8fe &lt;unknown&gt;
+#15 0x564dc9b8fd35 &lt;unknown&gt;
+#16 0x564dc9bc8958 &lt;unknown&gt;
+#17 0x564dc9bc8a90 &lt;unknown&gt;
+#18 0x564dc9be1cf5 &lt;unknown&gt;
+#19 0x7f99acb976db start_thread
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace28010264", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace28010264'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x564dc9b6c713 &lt;unknown&gt;
+#1 0x564dc9908211 &lt;unknown&gt;
+#2 0x564dc9931938 &lt;unknown&gt;
+#3 0x564dc992e6f7 &lt;unknown&gt;
+#4 0x564dc99722b9 &lt;unknown&gt;
+#5 0x564dc997164c &lt;unknown&gt;
+#6 0x564dc9969bf3 &lt;unknown&gt;
+#7 0x564dc993af34 &lt;unknown&gt;
+#8 0x564dc993bf41 &lt;unknown&gt;
+#9 0x564dc9bab058 &lt;unknown&gt;
+#10 0x564dc9baceee &lt;unknown&gt;
+#11 0x564dc9bac960 &lt;unknown&gt;
+#12 0x564dc9bad5b5 &lt;unknown&gt;
+#13 0x564dc9b99bfc &lt;unknown&gt;
+#14 0x564dc9bad8fe &lt;unknown&gt;
+#15 0x564dc9b8fd35 &lt;unknown&gt;
+#16 0x564dc9bc8958 &lt;unknown&gt;
+#17 0x564dc9bc8a90 &lt;unknown&gt;
+#18 0x564dc9be1cf5 &lt;unknown&gt;
+#19 0x7f99acb976db start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.tc_4()'><b>tc_4</b><br>Test class: scripts.TestCase<br>Test method: TC004-This test verify validation message is shown when user enter invalid OTP for login</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x55aafefaa713 &lt;unknown&gt;
+#1 0x55aafed46211 &lt;unknown&gt;
+#2 0x55aafed6f938 &lt;unknown&gt;
+#3 0x55aafed6c6f7 &lt;unknown&gt;
+#4 0x55aafedb02b9 &lt;unknown&gt;
+#5 0x55aafedaf64c &lt;unknown&gt;
+#6 0x55aafeda7bf3 &lt;unknown&gt;
+#7 0x55aafed78f34 &lt;unknown&gt;
+#8 0x55aafed79f41 &lt;unknown&gt;
+#9 0x55aafefe9058 &lt;unknown&gt;
+#10 0x55aafefeaeee &lt;unknown&gt;
+#11 0x55aafefea960 &lt;unknown&gt;
+#12 0x55aafefeb5b5 &lt;unknown&gt;
+#13 0x55aafefd7bfc &lt;unknown&gt;
+#14 0x55aafefeb8fe &lt;unknown&gt;
+#15 0x55aafefcdd35 &lt;unknown&gt;
+#16 0x55aaff006958 &lt;unknown&gt;
+#17 0x55aaff006a90 &lt;unknown&gt;
+#18 0x55aaff01fcf5 &lt;unknown&gt;
+#19 0x7f56a6b5c6db start_thread
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2088098699", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2088098699'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x55aafefaa713 &lt;unknown&gt;
+#1 0x55aafed46211 &lt;unknown&gt;
+#2 0x55aafed6f938 &lt;unknown&gt;
+#3 0x55aafed6c6f7 &lt;unknown&gt;
+#4 0x55aafedb02b9 &lt;unknown&gt;
+#5 0x55aafedaf64c &lt;unknown&gt;
+#6 0x55aafeda7bf3 &lt;unknown&gt;
+#7 0x55aafed78f34 &lt;unknown&gt;
+#8 0x55aafed79f41 &lt;unknown&gt;
+#9 0x55aafefe9058 &lt;unknown&gt;
+#10 0x55aafefeaeee &lt;unknown&gt;
+#11 0x55aafefea960 &lt;unknown&gt;
+#12 0x55aafefeb5b5 &lt;unknown&gt;
+#13 0x55aafefd7bfc &lt;unknown&gt;
+#14 0x55aafefeb8fe &lt;unknown&gt;
+#15 0x55aafefcdd35 &lt;unknown&gt;
+#16 0x55aaff006958 &lt;unknown&gt;
+#17 0x55aaff006a90 &lt;unknown&gt;
+#18 0x55aaff01fcf5 &lt;unknown&gt;
+#19 0x7f56a6b5c6db start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.tc_5()'><b>tc_5</b><br>Test class: scripts.TestCase<br>Test method: TC005-This test verify user can view a tests from Test tab</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x5614163b1713 &lt;unknown&gt;
+#1 0x56141614d211 &lt;unknown&gt;
+#2 0x561416176938 &lt;unknown&gt;
+#3 0x5614161736f7 &lt;unknown&gt;
+#4 0x5614161b72b9 &lt;unknown&gt;
+#5 0x5614161b664c &lt;unknown&gt;
+#6 0x5614161aebf3 &lt;unknown&gt;
+#7 0x56141617ff34 &lt;unknown&gt;
+#8 0x561416180f41 &lt;unknown&gt;
+#9 0x5614163f0058 &lt;unknown&gt;
+#10 0x5614163f1eee &lt;unknown&gt;
+#11 0x5614163f1960 &lt;unknown&gt;
+#12 0x5614163f25b5 &lt;unknown&gt;
+#13 0x5614163debfc &lt;unknown&gt;
+#14 0x5614163f28fe &lt;unknown&gt;
+#15 0x5614163d4d35 &lt;unknown&gt;
+#16 0x56141640d958 &lt;unknown&gt;
+#17 0x56141640da90 &lt;unknown&gt;
+#18 0x561416426cf5 &lt;unknown&gt;
+#19 0x7ff75c3bf6db start_thread
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace404152906", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace404152906'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x5614163b1713 &lt;unknown&gt;
+#1 0x56141614d211 &lt;unknown&gt;
+#2 0x561416176938 &lt;unknown&gt;
+#3 0x5614161736f7 &lt;unknown&gt;
+#4 0x5614161b72b9 &lt;unknown&gt;
+#5 0x5614161b664c &lt;unknown&gt;
+#6 0x5614161aebf3 &lt;unknown&gt;
+#7 0x56141617ff34 &lt;unknown&gt;
+#8 0x561416180f41 &lt;unknown&gt;
+#9 0x5614163f0058 &lt;unknown&gt;
+#10 0x5614163f1eee &lt;unknown&gt;
+#11 0x5614163f1960 &lt;unknown&gt;
+#12 0x5614163f25b5 &lt;unknown&gt;
+#13 0x5614163debfc &lt;unknown&gt;
+#14 0x5614163f28fe &lt;unknown&gt;
+#15 0x5614163d4d35 &lt;unknown&gt;
+#16 0x56141640d958 &lt;unknown&gt;
+#17 0x56141640da90 &lt;unknown&gt;
+#18 0x561416426cf5 &lt;unknown&gt;
+#19 0x7ff75c3bf6db start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+<tr>
+<td title='scripts.TestCase.tc_6()'><b>tc_6</b><br>Test class: scripts.TestCase<br>Test method: TC006-This test verify user can view a course from Courses tab</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x5572c2284713 &lt;unknown&gt;
+#1 0x5572c2020211 &lt;unknown&gt;
+#2 0x5572c2049938 &lt;unknown&gt;
+#3 0x5572c20466f7 &lt;unknown&gt;
+#4 0x5572c208a2b9 &lt;unknown&gt;
+#5 0x5572c208964c &lt;unknown&gt;
+#6 0x5572c2081bf3 &lt;unknown&gt;
+#7 0x5572c2052f34 &lt;unknown&gt;
+#8 0x5572c2053f41 &lt;unknown&gt;
+#9 0x5572c22c3058 &lt;unknown&gt;
+#10 0x5572c22c4eee &lt;unknown&gt;
+#11 0x5572c22c4960 &lt;unknown&gt;
+#12 0x5572c22c55b5 &lt;unknown&gt;
+#13 0x5572c22b1bfc &lt;unknown&gt;
+#14 0x5572c22c58fe &lt;unknown&gt;
+#15 0x5572c22a7d35 &lt;unknown&gt;
+#16 0x5572c22e0958 &lt;unknown&gt;
+#17 0x5572c22e0a90 &lt;unknown&gt;
+#18 0x5572c22f9cf5 &lt;unknown&gt;
+#19 0x7f6e8e3b46db start_thread
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace795156371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace795156371'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot find msedge binary
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;predator&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.4.0-131-generic&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: #0 0x5572c2284713 &lt;unknown&gt;
+#1 0x5572c2020211 &lt;unknown&gt;
+#2 0x5572c2049938 &lt;unknown&gt;
+#3 0x5572c20466f7 &lt;unknown&gt;
+#4 0x5572c208a2b9 &lt;unknown&gt;
+#5 0x5572c208964c &lt;unknown&gt;
+#6 0x5572c2081bf3 &lt;unknown&gt;
+#7 0x5572c2052f34 &lt;unknown&gt;
+#8 0x5572c2053f41 &lt;unknown&gt;
+#9 0x5572c22c3058 &lt;unknown&gt;
+#10 0x5572c22c4eee &lt;unknown&gt;
+#11 0x5572c22c4960 &lt;unknown&gt;
+#12 0x5572c22c55b5 &lt;unknown&gt;
+#13 0x5572c22b1bfc &lt;unknown&gt;
+#14 0x5572c22c58fe &lt;unknown&gt;
+#15 0x5572c22a7d35 &lt;unknown&gt;
+#16 0x5572c22e0958 &lt;unknown&gt;
+#17 0x5572c22e0a90 &lt;unknown&gt;
+#18 0x5572c22f9cf5 &lt;unknown&gt;
+#19 0x7f6e8e3b46db start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
+	at objectManager.DriverManager.createDriver(DriverManager.java:53)
+	at objectManager.DriverManager.getDriver(DriverManager.java:23)
+	at utils.Listener.onTestStart(Listener.java:20)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1904)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:685)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>scripts.TestCase@53251a66</td></tr>
+</table><p>
+</body>
+</html>

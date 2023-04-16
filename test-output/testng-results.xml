@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-19T06:44:18Z" name="Relevel Automation RgressionSuite" finished-at="2022-11-19T06:45:32Z" duration-ms="74082">
+    <groups>
+    </groups>
+    <test started-at="2022-11-19T06:44:18Z" name="RegressionSuite" finished-at="2022-11-19T06:45:32Z" duration-ms="74082">
+      <class name="scripts.TestCase">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:10Z" name="beforeSuite" finished-at="2022-11-19T12:14:18Z" duration-ms="8101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method signature="tc_1()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:18Z" name="tc_1" description="TC001-This test verifies user see a validation message when invalid mobile number entered for login" finished-at="2022-11-19T12:14:30Z" duration-ms="11588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_1 -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:18Z" name="beforemethod" finished-at="2022-11-19T12:14:18Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:30Z" name="afterMethod" finished-at="2022-11-19T12:14:30Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:30Z" name="beforemethod" finished-at="2022-11-19T12:14:30Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="tc_2()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:30Z" name="tc_2" description="TC002-This test verify user can click login button when valid mobile number is provided" finished-at="2022-11-19T12:14:44Z" duration-ms="13629" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:44Z" name="afterMethod" finished-at="2022-11-19T12:14:44Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="tc_3()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:44Z" name="tc_3" description="TC003-This test verify user can edit and login with new mobile number" finished-at="2022-11-19T12:14:56Z" duration-ms="12647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_3 -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:44Z" name="beforemethod" finished-at="2022-11-19T12:14:44Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:56Z" name="afterMethod" finished-at="2022-11-19T12:14:56Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="tc_4()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:56Z" name="tc_4" description="TC004-This test verify validation message is shown when user enter invalid OTP for login" finished-at="2022-11-19T12:15:14Z" duration-ms="18205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_4 -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:14:56Z" name="beforemethod" finished-at="2022-11-19T12:14:56Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:14Z" name="afterMethod" finished-at="2022-11-19T12:15:14Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="tc_5()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:14Z" name="tc_5" description="TC005-This test verify user can view a tests from Test tab" finished-at="2022-11-19T12:15:19Z" duration-ms="4929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_5 -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:14Z" name="beforemethod" finished-at="2022-11-19T12:15:14Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:19Z" name="afterMethod" finished-at="2022-11-19T12:15:19Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:19Z" name="beforemethod" finished-at="2022-11-19T12:15:19Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="tc_6()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:19Z" name="tc_6" description="TC006-This test verify user can view a course from Courses tab" finished-at="2022-11-19T12:15:32Z" duration-ms="13063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_6 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:32Z" name="afterMethod" finished-at="2022-11-19T12:15:32Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:scripts.TestCase@6e15fe2]" started-at="2022-11-19T12:15:33Z" name="afterSuite" finished-at="2022-11-19T12:15:33Z" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- scripts.TestCase -->
+    </test> <!-- RegressionSuite -->
+  </suite> <!-- Relevel Automation RgressionSuite -->
+</testng-results>
