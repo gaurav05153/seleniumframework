@@ -48,7 +48,7 @@ public class TestCase {
     @AfterSuite()
     public void afterSuite() {
         extentReport.flush();
-        driver.close();
+        driver.close();  //close the driver
     }
 
     @BeforeMethod(alwaysRun = true)
