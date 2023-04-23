@@ -32,7 +32,7 @@ public class TestCase {
     ExtentReport extentReport;
     ReadWriteExcel excel;
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void beforeSuite() throws IOException {
         driver = DriverManager.getDriver();
         driver.get(ConfigFileReader.getUrl());
@@ -45,7 +45,7 @@ public class TestCase {
         PropertyConfigurator.configure("log4j.properties");
     }
 
-    @AfterSuite()
+    @AfterSuite(alwaysRun = true)
     public void afterSuite() {
         extentReport.flush();
         driver.close();  //close the driver
@@ -67,7 +67,7 @@ public class TestCase {
     }
 
 
-    @Test(description = "TC001-This test verifies user see a validation message when invalid mobile number is entered for login", priority = 1, enabled = true)
+    @Test(description = "TC001-This test verifies user see a validation message when invalid mobile number is entered for login", priority = 1, enabled = false)
     public void tc_1() throws Exception {
         try {
             HSSFSheet sheet = excel.getSheet("TC001");
@@ -103,7 +103,7 @@ public class TestCase {
         }
     }
 
-    @Test(description = "TC002-This test verifies user see a validation message when invalid mobile number is entered for login (Different Way)", priority = 2, enabled = true)
+    @Test(description = "TC002-This test verifies user see a validation message when invalid mobile number is entered for login (Different Way)", priority = 2, enabled = false)
     public void tc_2() throws Exception {
         String expectedMessage = "Please enter valid mobile number";
         try {
@@ -152,7 +152,7 @@ public class TestCase {
         }
     }
 
-    @Test(description = "TC003-This test verifies that user can click login button when valid mobile number is provided", priority = 3, enabled = true)
+    @Test(description = "TC003-This test verifies that user can click login button when valid mobile number is provided", priority = 3, enabled = false)
     public void tc_3() throws Exception {
         Logging.startTestCase("TC003");
         try {
@@ -186,7 +186,7 @@ public class TestCase {
         }
     }
 
-    @Test(description = "TC004-This test verifies that user can click login button when valid mobile number is provided (Different Way) ", priority = 4, enabled = true)
+    @Test(description = "TC004-This test verifies that user can click login button when valid mobile number is provided (Different Way) ", priority = 4, enabled = false)
     public void tc_4() throws Exception {
         Logging.startTestCase("TC004");
         try {
@@ -219,11 +219,11 @@ public class TestCase {
         }
     }
 
-    @Test(description = "TC005-This test verify user can edit and login with new mobile number", priority = 5, enabled = false)
-    public void tc_5() throws Exception {
+    @Test(description = "TC005-This test verify user can edit and login with new mobile number", priority = 5, enabled = true)
+    public void tc_5() throws IOException {
 	  Logging.startTestCase("TC005");
         try {
-            HSSFSheet sheet = excel.getSheet("TC005");
+            HSSFSheet sheet = excel.getSheet("TC003");
             for (int i = 1; i <= sheet.getLastRowNum(); i++) {
                 extentReport.createTest("TC005-This test verify user can edit and login with new mobile number");
                 action.clickLink(relevelPageObjects.lnkLogin, "Login link");
@@ -259,11 +259,55 @@ public class TestCase {
         }
     }
 
+    @Test(description = "TC006-This test verify user can edit and login with new mobile number(Different Way) ", priority = 6, enabled = true)
+    public void tc_6() throws IOException {
+        Logging.startTestCase("TC006");
+        try {
+            HSSFSheet sheet = excel.getSheet("TC003");
+            for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+                extentReport.createTest("TC006-This test verify user can edit and login with new mobile number (Different Way)");
+                action.clickLink(relevelPageObjects.lnkLogin, "Login link");
+                extentReport.info("Login link clicked");
+                action.sendKeys(relevelPageObjects.txtMobileNo, sheet.getRow(i).getCell(0).getStringCellValue(), "Mobile Number textbox");
+                extentReport.info("Mobile number entered");
+                action.clickButton(relevelPageObjects.btnLogin, "Login button");
+                extentReport.info("Login button clicked");
+                action.clickLink(relevelPageObjects.lnkEditMobileNumber, "Edit");
+                extentReport.info("Edit mobile number link clicked");
+                action.sendKeys(relevelPageObjects.txtMobileNo, sheet.getRow(i).getCell(1).getStringCellValue(), "Mobile Number textbox");
+                extentReport.info("New mobile number entered");
+                action.clickButton(relevelPageObjects.btnLogin, "Login button");
+                extentReport.info("Login button clicked");
+                utility.waitForVisibilityOfElement(driver, relevelPageObjects.messagePlaceholderForOtpSent);
+                String expectedMessage = "We've sent an OTP to your mobile number";
+                String actualMessage = relevelPageObjects.messagePlaceholderForOtpSent.getText();
+                Assert.assertEquals(actualMessage, expectedMessage);  //checking the verbiage of message
+                if (relevelPageObjects.messagePlaceholderForOtpSent.isDisplayed()) {  //checking that message is displayed on UI
+                    extentReport.pass("Sent an OTP to your mobile number message is displayed");
+                    extentReport.addScreenshot(driver);
+                    Logging.info("Sent an OTP to your mobile number message is displayed");
+                    Logging.endTestCase();
+                } else {
+                    extentReport.fail("OTP is not sent");
+                    extentReport.addScreenshot(driver);
+                    Logging.info("OTP is not sent");
+                    Logging.endTestCase();
+                }
+                driver.get(ConfigFileReader.getUrl());
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            extentReport.fail(e.getMessage());
+            Logging.info(e.getMessage());
+            Logging.endTestCase();
+        }
+    }
+
     @Test(description = "TC007-This test verify validation message is shown when user enter invalid OTP for login", priority = 7, enabled = false)
     public void tc_7() throws Exception {
 Logging.startTestCase("TC007");
         try {
-            HSSFSheet sheet = excel.getSheet("TC007");
+            HSSFSheet sheet = excel.getSheet("TC004");
             for (int i = 1; i <= sheet.getLastRowNum(); i++) {
                 extentReport.createTest("TC007-This test verify validation message is shown when user enter invalid OTP for login");
                 action.clickLink(relevelPageObjects.lnkLogin, "Login link");

@@ -1,6 +1,6 @@
 package objectManager;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
@@ -10,8 +10,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import dataProvider.ConfigFileReader;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.Logging;
+
+import static java.lang.Long.parseLong;
 
 public class DriverManager 
 {
@@ -29,9 +30,9 @@ public class DriverManager
 		switch(ConfigFileReader.getBrowser().toUpperCase())
 		{
 		case "FIREFOX":
-			WebDriverManager.firefoxdriver().setup();
+			//WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			Logging.info("Firefox driver reated");
+			Logging.info("Firefox driver created");
 			break;
 		case "CHROME":
 			ChromeOptions options = new ChromeOptions();
@@ -45,12 +46,12 @@ public class DriverManager
 				options.addArguments("--headless");
 				options.addArguments("--disable-gpu");
 			}
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(options);
 			Logging.info("Chrome driver created");
 			break;
 		case "EDGE":
-			WebDriverManager.edgedriver().setup();
+			//WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			Logging.info("Edge driver created");
 			break;
@@ -60,8 +61,10 @@ public class DriverManager
 			System.exit(0);
 			break;
 		}
-		driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigFileReader.getImplicitWait()), TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(Long.parseLong(ConfigFileReader.getPageLoadTimeout()), TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(parseLong(ConfigFileReader.getImplicitWait()), TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(parseLong(ConfigFileReader.getPageLoadTimeout()), TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(parseLong(ConfigFileReader.getImplicitWait())));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(parseLong(ConfigFileReader.getPageLoadTimeout())));
 		driver.manage().window().maximize();
 		Logging.info("Browser window maximize");
 	}

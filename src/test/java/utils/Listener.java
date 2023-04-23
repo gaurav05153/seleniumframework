@@ -2,15 +2,11 @@ package utils;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import context.TestContext;
-import dataProvider.ConfigFileReader;
 import extentReport.ExtentReport;
-import objectManager.DriverManager;
 
 public class Listener implements ITestListener {
     public static ExtentReport extentReport = new ExtentReport();

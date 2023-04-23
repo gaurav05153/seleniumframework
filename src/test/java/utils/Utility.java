@@ -2,10 +2,7 @@ package utils;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -20,8 +17,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.aventstack.extentreports.model.Media;
 
 import dataProvider.ConfigFileReader;
 
@@ -91,12 +86,4 @@ public class Utility
 		return dest.getAbsolutePath();
 	}
 
-	public static void login(WebDriver driver)
-	{
-		driver.findElement(By.partialLinkText("Login")).click();
-		driver.findElement(By.id("username")).sendKeys(ConfigFileReader.getUserName());
-		driver.findElement(By.id("password")).sendKeys(ConfigFileReader.getPassword());
-		driver.findElement(By.xpath("//input[@value='Log In']")).click();
-	}
-	
 }
